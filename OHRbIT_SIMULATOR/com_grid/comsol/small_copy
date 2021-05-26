@@ -1,0 +1,10 @@
+% Model:              trap435_extendedForMC.mph
+% Version:            COMSOL 5.2.0.220
+% Date:               Jul 1 2016, 08:07
+% Dimension:          3
+% Nodes:              4090601
+% Expressions:        4
+% Description:        OH  (M*Omega=9/4) x-acceleration, OH  (M*Omega=9/4) y-acceleration, OH (M*Omega=9/4) z-acceleration, OH (M*Omega=9/4,)Stark with "zero" corresponding to field free energy (ie: Lambda Doublet Splitting is subtracted off)
+% Length unit:        m
+% x                       y                        z                        ax_OH94 (m/s^2)          ay_OH94 (m/s^2)          az_OH94 (m/s^2)          starkV_OH94 (J)
+-0.005                    -0.005                   -0.018                   0.001584902297122257     -0.0029504476217102073   8.376699132128357E-6     3.410334921445184E-31

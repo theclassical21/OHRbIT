@@ -4,23 +4,21 @@ from __main__ import *
 ## Specifically this class has two attributes fully specified on instance,
 ##    these define the initial trapped population and the 
 
-class atomic_Cloud:
+class atomic_cloud:
     #################### CLASS INITIALIZATION, ATOMIC CLOUD ###################
-    ## Initializes the cloud,
-    ##    setting the default widths of the cloud to unity and the default
-    ##    initial population to 1e7 atoms.
-    def __init__(self, widths=[1,1,1],trapped_Pop=1e7):
-        self.dimensions = widths
+    ## Initializes the cloud
+    def __init__(self, width_array,trapped_Pop):
+        self.dimensions = width_array
         self.n_Atoms = trapped_Pop
 
     ######################### CLOUD DENSITY FUNCTION #########################
     ## Uses an input position, r at the origin by default, and the class
     ##    attributes defined above to model the density of the atomic cloud 
-    def cloud_density(self,r=[0,0,0]):
+    def cloud_density(self,point):
         ## Unpacks dimensions of the cloud and the position vector provided,
         ##   purely for legibility.
         X,Y,Z = self.dimensions
-        x,y,z = r
+        x,y,z = point
        
         ## Defines an effective volume and number of atoms at r.
         eff_Volume = (2*np.pi)**1.5*X*Y*Z

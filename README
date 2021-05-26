@@ -7,4 +7,4 @@ This project is structured s/t the user can execute complex functions from the c
 These higher level functions that have been tested are: GENERATE_GRIDS and interpolate_test
 
 When running interpolate_test, ensure that GENERATE_GRIDS acts on the Test file in read_acceleration.
-This is done either by commenting/uncommenting appropriate lines in core_tools.pathDefinitions, or on execution.
+This is done either by commenting/uncommenting appropriate lines in core_tools.pathDefinitions, or on execution

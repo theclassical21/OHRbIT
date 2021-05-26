@@ -1,12 +1,12 @@
 from __main__ import *
 def bell(i,x):
     ring_cycle = 1 if len(x) < 20 else round(len(x)/10)
-    if not i % ring_cycle:
-        return 'ding'
+    return not bool(i % ring_cycle)
     
 def read_Accel(fname):
     full_read = pd.read_csv(fname,delimiter=',')
     return full_read
+
 def create_grids(full_read):
     X = full_read.groupby('x')
     x = [ key for key in X.groups ]
@@ -26,7 +26,8 @@ def create_grids(full_read):
     I,J,K = range(len(x)), range(len(y)), range(len(z))
     for i in I:
         subx = X.get_group(x[i])
-        print(bell(i,x))
+        if bell(i,x):
+            print('ding')
         for j in J:
             groupy = subx.groupby('y')
             suby = groupy.get_group(y[j])
