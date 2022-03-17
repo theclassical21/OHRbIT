@@ -13,7 +13,7 @@ print(pth.abspath('.'))
 
 ## GENERATE_GRIDS:
 ### This script generates 6 Nx X Ny X Nz
-def GENERATE_GRIDS:
+def GENERATE_GRIDS():
     default_file = core_tools.pathDefinitions.acc_file
     use_default_file = input(
         "Generate Grids from " + default_file + " ? [0/1]: "
